@@ -291,7 +291,77 @@ letter-spacing:2px;
     }
 
 }
+    
+/* ================= ดาวตก ================= */
 
+.shooting-stars{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:1;
+    overflow:hidden;
+}
+
+.shooting-stars span{
+    position:absolute;
+    width:180px;
+    height:2px;
+    background:linear-gradient(90deg,#fff,transparent);
+    border-radius:50px;
+    transform:rotate(-45deg);
+
+    animation:shoot 4s linear infinite;
+}
+
+/* ตำแหน่งดาวตก */
+
+.shooting-stars span:nth-child(1){
+    top:10%;
+    left:-20%;
+    animation-delay:0s;
+}
+
+.shooting-stars span:nth-child(2){
+    top:30%;
+    left:-35%;
+    animation-delay:2s;
+}
+
+.shooting-stars span:nth-child(3){
+    top:60%;
+    left:-25%;
+    animation-delay:4s;
+}
+
+.shooting-stars span:nth-child(4){
+    top:20%;
+    left:-40%;
+    animation-delay:6s;
+}
+
+/* Animation */
+
+@keyframes shoot{
+
+0%{
+    transform:translate(0,0) rotate(-45deg);
+    opacity:0;
+}
+
+10%{
+    opacity:1;
+}
+
+100%{
+    transform:translate(1400px,800px) rotate(-45deg);
+    opacity:0;
+}
+
+}
+    
 </style>
 
 </head>
@@ -303,6 +373,14 @@ letter-spacing:2px;
     <span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span>
 </div>
+    
+<div class="shooting-stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    
 <div class="card">
 
 <div class="profile">

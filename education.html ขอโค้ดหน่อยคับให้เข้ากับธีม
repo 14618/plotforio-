@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="education.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+
+<header>
+    <nav>
+        <div class="logo">My Portfolio</div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html" class="active">Education</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="education">
+
+    <h1 class="section-title">
+        My <span>Education</span>
+    </h1>
+
+    <div class="timeline">
+
+        <div class="container left">
+            <div class="content">
+                <h3>🎓 มัธยมศึกษาตอนต้น</h3>
+                <small>2017 - 2020</small>
+                <p>
+                    ศึกษาพื้นฐานวิชาการและเริ่มสนใจด้านเทคโนโลยี
+                </p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h3>💻 มัธยมศึกษาตอนปลาย</h3>
+                <small>2020 - 2023</small>
+                <p>
+                    เริ่มศึกษาเกี่ยวกับการเขียนโปรแกรม
+                    และการออกแบบเว็บไซต์
+                </p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h3>🏫 วิทยาลัย</h3>
+                <small>2023 - ปัจจุบัน</small>
+                <p>
+                    ศึกษาสาขาเทคโนโลยีสารสนเทศ
+                    พัฒนาเว็บไซต์ด้วย HTML, CSS,
+                    JavaScript และฐานข้อมูล
+                </p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h3>📜 Certificates</h3>
+                <small>Online Learning</small>
+                <p>
+                    HTML5<br>
+                    CSS3<br>
+                    JavaScript<br>
+                    Responsive Design
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

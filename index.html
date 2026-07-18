@@ -6,7 +6,9 @@
 <title>My Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
-
+    
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <style>
     /* ================= ดาวพื้นหลัง ================= */
 
@@ -137,15 +139,17 @@ border-radius:30px;
 
 background:rgba(20,20,20,.45);
 
-backdrop-filter:blur(18px);
+backdrop-filter:blur(25px);
 
-border:1px solid rgba(255,255,255,.15);
+border:1px solid rgba(255,255,255,.2);
 
 box-shadow:
-0 15px 40px rgba(0,0,0,.5),
-0 0 30px rgba(168,85,247,.4);
+0 15px 40px rgba(0,0,0,.6),
+0 0 30px rgba(168,85,247,.35);
 
 text-align:center;
+    
+animation:show .9s ease;
 }
 
 /* รูปโปรไฟล์ */
@@ -196,6 +200,30 @@ text-shadow:
 0 0 10px #a855f7,
 0 0 20px #6d28d9;
 
+}
+    h1::after{
+    content:"";
+    display:block;
+    width:120px;
+    height:4px;
+    margin:10px auto 0;
+    border-radius:10px;
+    background:linear-gradient(90deg,#fff,#c084fc,#7c3aed);
+}
+
+    h2{
+    color:#fff;
+    font-size:24px;
+    margin:10px 0;
+    font-weight:500;
+}
+    .welcome{
+    color:#ffffff;
+    font-size:14px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin:12px 0;
+    opacity:.8;
 }
 
 p{
@@ -248,6 +276,21 @@ box-shadow:
 color:#ddd;
 letter-spacing:2px;
 }
+    /* Animation เปิดหน้าเว็บ */
+
+@keyframes show{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
 
 </style>
 
@@ -270,20 +313,41 @@ letter-spacing:2px;
 
 <h1>PORTFOLIO</h1>
 
-<p>แฟ้มสะสมผลงาน นักเรียนชั้นมัธยมศึกษาปีที่ 6</p>
+<h2>ชื่อของคุณ</h2>
 
+<p class="welcome">
+Welcome to my portfolio website
+</p>
+
+<p>
+แฟ้มสะสมผลงาน นักเรียนชั้นมัธยมศึกษาปีที่ 6
+</p>
 <div class="menu">
 
-<a href="index.html">🏠 หน้าแรก</a>
+<a href="index.html">
+    <i class="fa-solid fa-house"></i>
+    หน้าแรก
+</a>
 
-<a href="profile.html">👤 ประวัติส่วนตัว</a>
+<a href="profile.html">
+    <i class="fa-solid fa-user"></i>
+    ประวัติส่วนตัว
+</a>
 
-<a href="education.html">🎓 ประวัติการศึกษา</a>
+<a href="education.html">
+    <i class="fa-solid fa-graduation-cap"></i>
+    ประวัติการศึกษา
+</a>
 
-<a href="portfolio.html">🏆 ผลงาน</a>
+<a href="portfolio.html">
+    <i class="fa-solid fa-trophy"></i>
+    ผลงาน
+</a>
 
-<a href="contact.html">📞 ช่องทางติดต่อ</a>
-
+<a href="contact.html">
+    <i class="fa-solid fa-phone"></i>
+    ช่องทางติดต่อ
+</a>
 </div>
 
 <div class="footer">

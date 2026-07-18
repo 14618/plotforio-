@@ -16,89 +16,101 @@
 }
 
 body{
-    margin:0;
-    min-height:100vh;
-    display:grid;
-    place-items:center;
-    background:linear-gradient(135deg,#4facfe,#00f2fe);
-    overflow:hidden;
+    
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0f0f0f,#3b0764,#7c3aed,#ffffff);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+overflow:hidden;
 }
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
 
 /* วงกลมพื้นหลัง */
 
 body::before{
-    content:"";
-    position:fixed;
-    width:320px;
-    height:320px;
-    background:#ffffff55;
-    border-radius:50%;
-    top:-100px;
-    left:-100px;
-    filter:blur(40px);
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:#a855f755;
+border-radius:50%;
+top:-100px;
+left:-100px;
+filter:blur(60px);
 }
 
 body::after{
-    content:"";
-    position:fixed;
-    width:350px;
-    height:350px;
-    background:#6a5af955;
-    border-radius:50%;
-    bottom:-120px;
-    right:-120px;
-    filter:blur(50px);
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:#ffffff33;
+border-radius:50%;
+bottom:-150px;
+right:-120px;
+filter:blur(70px);
 }
 
 /* กล่องหลัก */
 
 .card{
     position:relative;
-    z-index:2;
+z-index:1;
+width:430px;
+padding:45px;
+border-radius:30px;
 
-    width:420px;
-    max-width:90%;
+background:rgba(20,20,20,.45);
 
-    padding:40px;
+backdrop-filter:blur(18px);
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+border:1px solid rgba(255,255,255,.15);
 
-    border-radius:30px;
+box-shadow:
+0 15px 40px rgba(0,0,0,.5),
+0 0 30px rgba(168,85,247,.4);
 
-    background:rgba(255,255,255,.18);
-    backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,.3);
-
-    box-shadow:0 25px 50px rgba(0,0,0,.25);
-
-    text-align:center;
+text-align:center;
 }
 
 /* รูปโปรไฟล์ */
 
 .profile{
     width:180px;
-    height:180px;
+height:180px;
+margin:auto;
+border-radius:50%;
+overflow:hidden;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+border:5px solid white;
 
-    margin:0 auto 25px;
+box-shadow:
+0 0 20px white,
+0 0 45px #a855f7,
+0 0 80px #6d28d9;
 
-    border-radius:50%;
-    overflow:hidden;
+transition:.5s;
 
-    border:6px solid white;
+}
 
-    box-shadow:
-        0 0 35px #fff,
-        0 0 60px #00d4ff;
+.profile:hover{
 
-    transition:.4s;
+transform:scale(1.08);
+
+box-shadow:
+0 0 25px white,
+0 0 60px #c084fc,
+0 0 100px #9333ea;
+
 }
 
 .profile img{
@@ -114,11 +126,20 @@ body::after{
 }
 
 h1{
-    color:white;
-    font-size:38px;
-    margin-bottom:10px;
+   margin-top:25px;
+font-size:40px;
+color:white;
+text-shadow:
+0 0 10px #a855f7,
+0 0 20px #6d28d9;
+
 }
 
+p{
+
+color:#dddddd;
+
+}
 p{
     color:white;
     margin-bottom:30px;
@@ -131,41 +152,44 @@ p{
 }
 
 .menu a{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
     text-decoration:none;
 
-    padding:15px;
+padding:15px;
 
-    border-radius:50px;
+border-radius:50px;
 
-    background:rgba(255,255,255,.22);
+background:linear-gradient(135deg,#7c3aed,#4c1d95);
 
-    color:white;
+color:white;
 
-    font-size:18px;
+font-size:18px;
 
-    font-weight:500;
+font-weight:500;
 
-    backdrop-filter:blur(10px);
+transition:.4s;
 
-    transition:.3s;
+box-shadow:
+0 8px 20px rgba(124,58,237,.45);
 
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
 .menu a:hover{
-    background:white;
-    color:#0099ff;
-    transform:translateY(-5px);
+
+background:linear-gradient(135deg,#ffffff,#e9d5ff);
+
+color:#4c1d95;
+
+transform:translateY(-6px) scale(1.03);
+
+box-shadow:
+0 15px 30px rgba(255,255,255,.3);
+
 }
 
 .footer{
     margin-top:30px;
-    color:white;
-    font-weight:500;
+color:#ddd;
+letter-spacing:2px;
 }
 
 </style>
@@ -209,4 +233,4 @@ p{
 </div>
 
 </body>
-</html>  ขอม่วงสลับขาวสลับดำ
+</html>
